@@ -36,11 +36,11 @@
 
 -   [ ] The visual examples of the webpage:
     -   [ ] The Sunset view with a warm sky
-        -   [ ] <img src="img/zen-garden/zen-garden-at-sunset.png" alt="Zen Garden at Sunset" width="550" height="400">
+        -   [ ] <img src="img/zen-garden/zen-garden-at-sunset.png" alt="Zen Garden at Sunset" width="100%" height="400">
     -   [ ] The Night view with the moon and the stars
-        -   [ ] <img src="img/zen-garden/zen-garden-at-night.png" alt="Zen Garden at Night" width="550" height="450">
+        -   [ ] <img src="img/zen-garden/zen-garden-at-night.png" alt="Zen Garden at Night" width="100%" height="450">
     -   [ ] Close-up of the Zen Garden
-        -   [ ] <img src="img/zen-garden/zen-garden-close-up.png" alt="Zen Garden Close-Up" width="550" height="450">
+        -   [ ] <img src="img/zen-garden/zen-garden-close-up.png" alt="Zen Garden Close-Up" width="100%" height="450">
 
 <hr>
 
