@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- & Title of the webpage -->
+    <title>Zen Garden VR</title>
+    <!-- & Link the CSS file to add style the webpage -->
+    <link rel="stylesheet" href="style.css">
+    <!-- & The A-Frame library (this must always be done first) -->
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+    <!-- & Link the JS file to add functionality to the webpage -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- & The Zen Garden VR Project -->
+    <a-scene>
+        <!-- & This will change the camera angle -->
+        <!-- ~ Camera to see the whole <a-plane> -->
+        <!-- <a-camera
+            position="-0.2 2.5 7"
+            rotation="-30 0 0"
+        ></a-camera> -->
+        <a-camera
+            position="-0.2 1.2 5"
+            rotation="-30 0 0"
+        ></a-camera>
+
+        <!-- ~ View close to the cherry blossom tree (left-side) -->
+        <!-- <a-camera
+            position="-7 1.5 2"
+            rotation="-30 0 0"
+        ></a-camera> -->
+
+        <!-- ~ View close to the cherry blossom tree (right-side) -->
+        <!-- <a-camera
+            position="7 1.5 2"
+            rotation="-30 0 0"
+        ></a-camera> -->
+
+        <!-- ~ View close to the lantern (left-side) -->
+        <!-- <a-camera
+            position="-3 1.6 1"
+            rotation="-30 0 0"
+        ></a-camera> -->
+
+        <!-- ~ View close to the lantern (left-side) -->
+        <!-- <a-camera
+            position="3 1.6 1"
+            rotation="-30 0 0"
+        ></a-camera> -->
+
+        <!-- ~ View close to the Meditation Stones between the Lanterns with raked rings -->
+        <!-- <a-camera
+            position="0 1.6 2"
+            rotation="-30 0 0"
+        ></a-camera> -->
+
+        <!-- ~ View close to the Koi Pond -->
+        <!-- <a-camera
+            position="0 1.3 5"
+            rotation="-30 0 0"
+        ></a-camera> -->
+
+        <!-- ~ View close to the right of the Koi Pond (Stacked meditation cairn)-->
+        <!-- <a-camera
+            position="4.5 1.3 4.5"
+            rotation="-30 0 0"
+        ></a-camera> -->
+
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- & The Sky of the Zen Garden (warm sunset) -->
+        <a-sky
+            color="#ffa07a"
+        ></a-sky>
+
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- & This will be the Ground (sand foundation of the Zen Garden) -->
+        <a-plane
+            position="0 -0.05 0"
+            rotation="-90 0 0"
+            width="20"
+            height="20"
+            color="#f4e4bc"
+        ></a-plane>
+
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- & This will be the Cherry Blossom Tree on the left-side -->
+        <!-- ~ The Tree Trunk -->
+        <a-cylinder
+            position="-7 0.7 -3"
+            radius="0.5"
+            height="2"
+            color="#8b4513"
+            rotation="0 15 0"
+        ></a-cylinder>
+
+        <!-- ~ The Bottom Layer (lower branches & wider spread) -->
+        <a-sphere
+            position="-7.5 1.8 -3.3"
+            radius="0.65"
+            color="#ffb7c5"
+        ></a-sphere>
+        <a-sphere
+            position="-6.5 1.9 -2.8"
+            radius="0.7"
+            color="#ff9eb5"
+        ></a-sphere>
+        <a-sphere
+            position="-7.3 1.7 -3.1"
+            radius="0.6"
+            color="#ffc0cb"
+        ></a-sphere>
+        <a-sphere
+            position="-6.6 1.8 -3.4"
+            radius="0.6"
+            color="#ffd1dc"
+        ></a-sphere>
+        <a-sphere
+            position="-7.0 1.6 -2.7"
+            radius="0.55"
+            color="#ffb7c5"
+        ></a-sphere>
+
+        <!-- ~ The Middle Layer (the main canopy) -->
+        <a-sphere
+            position="-7.0 2.4 -3.1"
+            radius="0.9"
+            color="#ffb7c5"
+        ></a-sphere>
+        <a-sphere
+            position="-6.4 2.2 -2.9"
+            radius="0.7"
+            color="#ff9eb5"
+        ></a-sphere>
+        <a-sphere
+            position="-7.6 2.1 -3.4"
+            radius="0.6"
+            color="#ff9eb5"
+        ></a-sphere>
+        <a-sphere
+            position="-6.8 2.8 -3.0"
+            radius="0.6"
+            color="#ffb7c5"
+        ></a-sphere>
+        <a-sphere
+            position="-7.3 2.7 -3.6"
+            radius="0.5"
+            color="#ffd1dc"
+        ></a-sphere>
+        <a-sphere
+            position="-7.8 1.9 -2.9"
+            radius="0.55"
+            color="#ff9eb5"
+        ></a-sphere>
+
+        <!-- ~ Add more to fill in the Middle Layer -->
+        <a-sphere
+            position="-6.6 2.5 -3.1"
+            radius="0.5"
+            color="#ffc0cb"
+        ></a-sphere>
+        <a-sphere
+            position="-7.4 2.6 -3.0"
+            radius="0.55"
+            color="#ffb7c5"
+        ></a-sphere>
+        <a-sphere
+            position="-6.9 2.3 -2.5"
+            radius="0.6"
+            color="#ff9eb5"
+        ></a-sphere>
+        <a-sphere
+            position="-7.2 2.1 -3.7"
+            radius="0.55"
+            color="#ffd1dc"
+        ></a-sphere>
+
+        <!-- ~ The Top Layer (the peak of the tree) -->
+        <a-sphere
+            position="-6.9 3.1 -3.0"
+            radius="0.65"
+            color="#ffb7c5"
+        ></a-sphere>
+        <a-sphere
+            position="-7.2 3.0 -3.2"
+            radius="0.55"
+            color="#ffc0cb"
+        ></a-sphere>
+        <a-sphere
+            position="-6.7 3.2 -3.3"
+            radius="0.5"
+            color="#ff9eb5"
+        ></a-sphere>
+        <a-sphere
+            position="-7.4 3.1 -2.9"
+            radius="0.5"
+            color="#ffd1dc"
+        ></a-sphere>
+
+        <!-- ~ The Topmost Peak of the Cherry Blossom Tree -->
+        <a-sphere
+            position="-7.0 3.5 -3.1"
+            radius="0.5"
+            color="#ffb7c5"
+        ></a-sphere>
+        <a-sphere
+            position="-7.0 3.8 -3.1"
+            radius="0.4"
+            color="#ffc0cb"
+        ></a-sphere>
+
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- & This will be the Cherry Blossom Tree on the right-side -->
+        <!-- ~ The Tree Trunk -->
+        <a-cylinder
+            position="7 0.7 -3"
+            radius="0.5"
+            height="2"
+            color="#8b4513"
+        ></a-cylinder>
+
+        <!-- ~ The Bottom Layer (lower branches & wider spread) -->
+        <a-sphere
+            position="7.5 1.8 -3.3"
+            radius="0.65"
+            color="#ffb7c5"
+        ></a-sphere>
+        <a-sphere
+            position="6.5 1.9 -2.8"
+            radius="0.7"
+            color="#ff9eb5"
+        ></a-sphere>
+        <a-sphere
+            position="7.3 1.7 -3.1"
+            radius="0.6"
+            color="#ffc0cb"
+        ></a-sphere>
+        <a-sphere
+            position="6.6 1.8 -3.4"
+            radius="0.6"
+            color="#ffd1dc"
+        ></a-sphere>
+        <a-sphere
+            position="7.0 1.6 -2.7"
+            radius="0.55"
+            color="#ffb7c5"
+        ></a-sphere>
+
+        <!-- ~ The Middle Layer (the main canopy) -->
+        <a-sphere
+            position="7.0 2.4 -3.1"
+            radius="0.9"
+            color="#ffb7c5"
+        ></a-sphere>
+        <a-sphere
+            position="6.4 2.2 -2.9"
+            radius="0.7"
+            color="#ff9eb5"
+        ></a-sphere>
+        <a-sphere
+            position="7.6 2.1 -3.4"
+            radius="0.6"
+            color="#ff9eb5"
+        ></a-sphere>
+        <a-sphere
+            position="6.8 2.8 -3.0"
+            radius="0.6"
+            color="#ffb7c5"
+        ></a-sphere>
+        <a-sphere
+            position="7.3 2.7 -3.6"
+            radius="0.5"
+            color="#ffd1dc"
+        ></a-sphere>
+        <a-sphere
+            position="7.8 1.9 -2.9"
+            radius="0.55"
+            color="#ff9eb5"
+        ></a-sphere>
+
+        <!-- ~ Add more to fill in the Middle Layer -->
+        <a-sphere
+            position="6.6 2.5 -3.1"
+            radius="0.5"
+            color="#ffc0cb"
+        ></a-sphere>
+        <a-sphere
+            position="7.4 2.6 -3.0"
+            radius="0.55"
+            color="#ffb7c5"
+        ></a-sphere>
+        <a-sphere
+            position="6.9 2.3 -2.5"
+            radius="0.6"
+            color="#ff9eb5"
+        ></a-sphere>
+
+        <!-- ~ The Top Layer (the peak of the tree) -->
+        <a-sphere
+            position="6.9 3.1 -3.0"
+            radius="0.65"
+            color="#ffb7c5"
+        ></a-sphere>
+        <a-sphere
+            position="7.2 3.0 -3.2"
+            radius="0.55"
+            color="#ffc0cb"
+        ></a-sphere>
+        <a-sphere
+            position="6.7 3.2 -3.3"
+            radius="0.5"
+            color="#ff9eb5"
+        ></a-sphere>
+        <a-sphere
+            position="7.4 3.1 -2.9"
+            radius="0.5"
+            color="#ffd1dc"
+        ></a-sphere>
+
+        <!-- ~ The Topmost Peak of the Cherry Blossom Tree -->
+        <a-sphere
+            position="7.0 3.5 -3.1"
+            radius="0.5"
+            color="#ffb7c5"
+        ></a-sphere>
+        <a-sphere
+            position="7.0 3.8 -3.1"
+            radius="0.4"
+            color="#ffc0cb"
+        ></a-sphere>
+
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- & This will be the Stone Lantern on the right of the cherry blossom tree on the left-side -->
+        <!-- ~ The Flat anchor stone under the base of the lantern (thinner slightly buried)-->
+        <a-cylinder
+            position="-4.0 0.02 -2.5"
+            radius="0.8"
+            height="0.05"
+            color="#7a7a7a"
+            roughness="0.8"
+            metalness="0.1"
+        ></a-cylinder>
+
+        <!-- ~ The Base pedesal of the Lantern -->
+        <a-box
+            position="-4.0 0.15 -2.5"
+            width="0.7"
+            height="0.15"
+            depth="0.7"
+            color="#9e9e9e"
+            roughness="0.7"
+        ></a-box>
+
+        <!-- ~ The Body of the Lantern -->
+        <a-cylinder
+            position="-4.0 0.65 -2.5"
+            radius="0.35"
+            height="0.9"
+            color="#757575"
+            roughness="0.6"
+        ></a-cylinder>
+
+        <!-- ~ Window cutouts (using a dark ring to simulate openings) -->
+        <a-torus
+            position="-4.0 0.75 -2.5"
+            radius="0.38"
+            radius-tubular="0.05"
+            color="#4a4a4a"
+            rotation="90 0 0"
+        ></a-torus>
+        <a-torus
+            position="-4.0 0.45 -2.5"
+            radius="0.38"
+            radius-tubular="0.05"
+            color="#4a4a4a"
+            rotation="90 0 0"
+        ></a-torus>
+
+        <!-- ~ The Top of the Lantern (cone roof) -->
+        <a-cone
+            position="-4.0 1.25 -2.5"
+            radius-bottom="0.65"
+            radius-top="0"
+            height="0.55"
+            color="#616161"
+            roughness="0.5"
+        ></a-cone>
+
+        <!-- ~ The Finial (small ball on top) -->
+        <a-sphere
+            position="-4.0 1.55 -2.5"
+            radius="0.08"
+            color="#555555"
+        ></a-sphere>
+
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- & This will be the Stone Lantern on the left of the cherry blossom tree on the right-side -->
+        <!-- ~ The Flat anchor stone under the base of the lantern (thinner slightly buried) -->
+        <a-cylinder
+            position="4.0 0.02 -2.5"
+            radius="0.8"
+            height="0.05"
+            color="#7a7a7a"
+            roughness="0.8"
+            metalness="0.1"
+        ></a-cylinder>
+
+        <!-- ~ The Base pedesal of the Lantern -->
+        <a-box
+            position="4.0 0.15 -2.5"
+            width="0.7"
+            height="0.15"
+            depth="0.7"
+            color="#9e9e9e"
+            roughness="0.7"
+        ></a-box>
+
+        <!-- ~ The Body of the Lantern -->
+        <a-cylinder
+            position="4.0 0.65 -2.5"
+            radius="0.35"
+            height="0.9"
+            color="#757575"
+            roughness="0.6"
+        ></a-cylinder>
+
+        <!-- ~ Window cutouts (using a dark ring to simulate openings) -->
+        <a-torus
+            position="4.0 0.75 -2.5"
+            radius="0.38"
+            radius-tubular="0.05"
+            color="#4a4a4a"
+            rotation="90 0 0"
+        ></a-torus>
+        <a-torus
+            position="4.0 0.45 -2.5"
+            radius="0.38"
+            radius-tubular="0.05"
+            color="#4a4a4a"
+            rotation="90 0 0"
+        ></a-torus>
+
+        <!-- ~ The Top of the Lantern (cone roof) -->
+        <a-cone
+            position="4.0 1.25 -2.5"
+            radius-bottom="0.65"
+            radius-top="0"
+            height="0.55"
+            color="#616161"
+            roughness="0.5"
+        ></a-cone>
+
+        <!-- ~ The Finial (small ball on top) -->
+        <a-sphere
+            position="4.0 1.55 -2.5"
+            radius="0.08"
+            color="#555555"
+        ></a-sphere>
+
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- & The Meditation stone stack (5 stones) with 4 raked rings -> centered between the two lanterns -->
+        <!-- ~ Stone Stack Cairns -->
+        <!-- ~ Stone 1 (bottom) -->
+        <a-sphere
+            position="0 0.22 -2.5"
+            radius="0.65"
+            color="#9e9e9e"
+            roughness="0.5"
+            metalness="0.05"
+            scale="1.2 0.55 1.0"
+        ></a-sphere>
+
+        <!-- ~ Stone 2 -->
+        <a-sphere
+            position="0 0.65 -2.5"
+            radius="0.55"
+            color="#a8a8a8"
+            roughness="0.45"
+            metalness="0.05"
+            scale="1.1 0.5 0.95"
+        ></a-sphere>
+
+        <!-- ~ Stone 3 -->
+        <a-sphere
+            position="0 1.02 -2.5"
+            radius="0.45"
+            color="#b5b5b5"
+            roughness="0.4"
+            metalness="0.05"
+            scale="1.0 0.45 0.85"
+        ></a-sphere>
+
+        <!-- ~ Stone 4 -->
+        <a-sphere
+            position="0 1.32 -2.5"
+            radius="0.35"
+            color="#c2c2c2"
+            roughness="0.35"
+            metalness="0.05"
+            scale="0.85 0.4 0.75"
+        ></a-sphere>
+
+        <!-- ~ Stone 5 (top) -> smallest stone -->
+        <a-sphere
+            position="0 1.54 -2.5"
+            radius="0.25"
+            color="#d0d0d0"
+            roughness="0.3"
+            metalness="0.05"
+            scale="0.7 0.35 0.65"
+        ></a-sphere>
+
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- ~ 4 Stacked Rings -->
+        <!-- ~ Raked Sand Ring 1 (innermost) -->
+        <a-torus
+            position="0 0.01 -2.5"
+            rotation="90 0 0"
+            radius="0.85"
+            radius-tubular="0.03"
+            color="#c2a577"
+        ></a-torus>
+
+        <!-- ~ Raked Sand Ring 2 -->
+        <a-torus
+            position="0 0.01 -2.5"
+            rotation="90 0 0"
+            radius="1.15"
+            radius-tubular="0.03"
+            color="#c2a577"
+        ></a-torus>
+
+        <!-- ~ Raked Sand Ring 3 -->
+        <a-torus
+            position="0 0.01 -2.5"
+            rotation="90 0 0"
+            radius="1.45"
+            radius-tubular="0.03"
+            color="#c2a577"
+        ></a-torus>
+
+        <!-- ~ Raked Sand Ring 4 (outermost)-->
+        <a-torus
+            position="0 0.01 -2.5"
+            rotation="90 0 0"
+            radius="1.75"
+            radius-tubular="0.03"
+            color="#c2a577"
+        ></a-torus>
+
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- & This will be the Koi Pond -->
+        <!-- ~ The Pond Water (small and placed in an open area) -->
+        <a-cylinder
+            position="0 0.02 1.8"
+            radius="1.6"
+            height="0.05"
+            color="#4aa3c2"
+            opacity="0.8"
+            transparent="true"
+        ></a-cylinder>
+
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- ~ Stone rim (torus) -->
+        <a-torus
+            position="0 0.05 1.8"
+            rotation="90 0 0"
+            radius="1.65"
+            radius-tubular="0.08"
+            color="#a8a8a8"
+            roughness="0.7"
+        ></a-torus>
+
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- ~ Decorative rim stones (8 around the edge) -->
+        <!-- ~ Deocrative Stone 1 -->
+        <a-sphere
+            position="1.60 0.25 1.8"
+            radius="0.20"
+            color="#9e9e9e"
+            roughness="0.8"
+            metalness="0.05"
+            scale="0.85 0.4 0.75"
+        ></a-sphere>
+
+        <!-- ~ Deocrative Stone 2 -->
+        <a-sphere
+            position="1.17 0.2 2.37"
+            radius="0.14"
+            color="#a8a8a8"
+            roughness="0.8"
+            metalness="0.05"
+            scale="1.0 0.45 0.85"
+        ></a-sphere>
+
+        <!-- ~ Deocrative Stone 3 -->
+        <a-sphere
+            position="0 0.2 3.45"
+            radius="0.14"
+            color="#8e8e8e"
+            roughness="0.8"
+            metalness="0.05"
+            scale="1.05 0.4 0.95"
+        ></a-sphere>
+
+        <!-- ~ Deocrative Stone 4 -->
+        <a-sphere
+            position="-1.17 0.2 2.37"
+            radius="0.14"
+            color="#b5b5b5"
+            roughness="0.8"
+            metalness="0.05"
+            scale="0.95 0.45 1.0"
+        ></a-sphere>
+
+        <!-- ~ Deocrative Stone 5 -->
+        <a-sphere
+            position="-1.65 0.23 1.8"
+            radius="0.14"
+            color="#9e9e9e"
+            roughness="0.8"
+            metalness="0.05"
+            scale="1.1 0.4 0.9"
+        ></a-sphere>
+
+        <!-- ~ Deocrative Stone 6 -->
+        <a-sphere
+            position="-1.17 0.2 1.23"
+            radius="0.14"
+            color="#a8a8a8"
+            roughness="0.8"
+            metalness="0.05"
+            scale="1.0 0.45 0.85"
+        ></a-sphere>
+
+        <!-- ~ Deocrative Stone 7 -->
+        <a-sphere
+            position="0 0.2 0.15"
+            radius="0.14"
+            color="#8e8e8e"
+            roughness="0.8"
+            metalness="0.05"
+            scale="1.05 0.4 0.95"
+        ></a-sphere>
+
+        <!-- ~ Deocrative Stone 8 -->
+        <a-sphere
+            position="1.17 0.2 1.23"
+            radius="0.14"
+            color="#b5b5b5"
+            roughness="0.8"
+            metalness="0.05"
+            scale="0.95 0.45 1.0"
+        ></a-sphere>
+
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- ~ Koi fish 1 (orange) -->
+        <a-entity position="-0.9 0.1 1.6" rotation="0 10 0">
+            <!-- ~ The Body -->
+            <a-sphere
+                position="0 0 0"
+                radius="0.22"
+                color="#ff8c42"
+                scale="1.2 0.45 0.6"
+            ></a-sphere>
+
+            <!-- ~ The Tail -->
+            <a-cone
+                position="-0.55 0 0"
+                radius-bottom="0.12"
+                radius-top="0"
+                height="0.18"
+                color="#ff8c42"
+            ></a-cone>
+
+            <!-- ~ The Dorsal Fin -->
+            <a-cone
+                position="0 0.2 0"
+                radius-bottom="0.08"
+                radius-top="0"
+                height="0.18"
+                color="#e07a30"
+            ></a-cone>
+
+            <!-- ~ The Eye -->
+            <a-sphere
+                position="0.15 0.08 0.25"
+                radius="0.05"
+                color="#000000"
+            ></a-sphere>
+            <a-sphere
+                position="0.18 0.1 0.28"
+                radius="0.02"
+                color="#ffffff"
+            ></a-sphere>
+        </a-entity>
+
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- ~ Koi fish 2 (white with orange patch) -->
+        <a-entity position="0.8 0.1 1.9" rotation="0 -15 0">
+            <!-- ~ The Body -->
+            <a-sphere
+                position="0 0 0"
+                radius="0.22"
+                color="#fdfdfd"
+                scale="1.2 0.45 0.6"
+            ></a-sphere>
+
+            <!-- ~ The Tail -->
+            <a-cone
+                position="-0.55 0 0"
+                radius-bottom="0.12"
+                radius-top="0"
+                height="0.28"
+                color="#fdfdfd"
+                rotation="-15 0 0"
+            ></a-cone>
+
+            <!-- ~ The Dorsal Fin -->
+            <a-cone
+                position="0 0.2 0"
+                radius-bottom="0.08"
+                radius-top="0"
+                height="0.18"
+                color="#ddccaa"
+            ></a-cone>
+
+            <!-- ~ Orange patch -->
+            <a-sphere
+                position="-0.1 0 0.1"
+                radius="0.1"
+                color="#ffaa66"
+                scale="0.8 0.4 0.5"
+            ></a-sphere>
+
+            <!-- ~ The Eye -->
+            <a-sphere
+                position="0.15 0.08 0.25"
+                radius="0.05"
+                color="#000000"
+            ></a-sphere>
+            <a-sphere
+                position="0.17 0.1 0.28"
+                radius="0.02"
+                color="#ffffff"
+            ></a-sphere>
+        </a-entity>
+
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- ~ Koi fish 3 (golden) -->
+        <a-entity position="0.01 0.1 2.7" rotation="0 -25 0">
+            <!-- ~ The Body -->
+            <a-sphere
+                position="0 0 0"
+                radius="0.2"
+                color="#ffcc66"
+                scale="1.15 0.42 0.55"
+            ></a-sphere>
+
+            <!-- ~ The Tail -->
+            <a-cone
+                position="-0.5 0 0"
+                radius-bottom="0.1"
+                radius-top="0"
+                height="0.25"
+                color="#ffcc66"
+                rotation="-15 0 0"
+            ></a-cone>
+
+            <!-- ~ The Dorsal Fin -->
+            <a-cone
+                position="0 0.18 0"
+                radius-bottom="0.07"
+                radius-top="0"
+                height="0.16"
+                color="#e0b050"
+            ></a-cone>
+
+            <!-- ~ The Eye -->
+            <a-sphere
+                position="0.19 0.11 0.25"
+                radius="0.035"
+                color="#000000"
+            ></a-sphere>
+            <a-sphere
+                position="0.22 0.13 0.28"
+                radius="0.015"
+                color="#ffffff"
+            ></a-sphere>
+        </a-entity>
+
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- & This will be the Meditation Stones -->
+        <!-- ~ Stacked Meditation Zen Cairn -> 2 stones on the right rim of the Koi Pond -->
+        <!-- ~ Stone 1 -> The Bottom Stone -->
+        <a-sphere
+            position="1.65 0.25 1.8"
+            radius="0.28"
+            color="#9e9e9e"
+            roughness="0.6"
+            metalness="0.05"
+            scale="1.3 0.45 1.1"
+        ></a-sphere>
+
+        <!-- ~ Stone 2 -> The Top Stone -->
+        <a-sphere
+            position="1.65 0.45 1.8"
+            radius="0.22"
+            color="#a8a8a8"
+            roughness="0.55"
+            metalness="0.05"
+            scale="1.1 0.4 0.95"
+        ></a-sphere>
+
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- ~ Stacked Zen Cairn -> 3 stones on the left edge of the Koi Pond -->
+        <!-- ~ Stone 1 -> The Bottom Stone -->
+        <a-sphere
+            position="-1.65 0.25 1.8"
+            radius="0.28"
+            color="#9e9e9e"
+            roughness="0.6"
+            metalness="0.05"
+            scale="1.3 0.45 1.1"
+        ></a-sphere>
+
+        <!-- ~ Stone 2 -> The Middle Stone -->
+        <a-sphere
+            position="-1.65 0.45 1.8"
+            radius="0.22"
+            color="#a8a8a8"
+            roughness="0.55"
+            metalness="0.05"
+            scale="1.1 0.4 0.95"
+        ></a-sphere>
+
+        <!-- ~ Stone 3 -> The Top Stone -->
+        <a-sphere
+            position="-1.65 0.60 1.8"
+            radius="0.17"
+            color="#b5b5b5"
+            roughness="0.5"
+            metalness="0.05"
+            scale="0.9 0.35 0.8"
+        ></a-sphere>
+
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- ~ Stacked Zen Cairn -> 4 stones on right of the Koi Pond edge and 4 raked lines -->
+        <!-- ~ Stone 1 -> The Bottom Stone -->
+        <a-sphere
+            position="4 0.22 1.8"
+            radius="0.55"
+            color="#9e9e9e"
+            roughness="0.5"
+            metalness="0.05"
+            scale="1.2 0.55 1.0"
+        ></a-sphere>
+
+        <!-- ~ Stone 2 -->
+        <a-sphere
+            position="4 0.6 1.8"
+            radius="0.5"
+            color="#a8a8a8"
+            roughness="0.45"
+            metalness="0.05"
+            scale="1.1 0.5 0.95"
+        ></a-sphere>
+
+        <!-- ~ Stone 3 -->
+        <a-sphere
+            position="4 0.93 1.8"
+            radius="0.4"
+            color="#b5b5b5"
+            roughness="0.4"
+            metalness="0.05"
+            scale="1.0 0.45 0.85"
+        ></a-sphere>
+
+        <!-- ~ Stone 4 -> The Top Stone -->
+        <a-sphere
+            position="4 1.2 1.8"
+            radius="0.3"
+            color="#c2c2c2"
+            roughness="0.35"
+            metalness="0.05"
+            scale="0.85 0.4 0.75"
+        ></a-sphere>
+
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- ~ Raked Sand Ring 1 (innermost) -->
+        <a-torus
+            position="4 0.01 1.8"
+            rotation="90 0 0"
+            radius="0.85"
+            radius-tubular="0.03"
+            color="#c2a577"
+        ></a-torus>
+
+        <!-- ~ Raked Sand Ring 2 -->
+        <a-torus
+            position="4 0.01 1.8"
+            rotation="90 0 0"
+            radius="1.15"
+            radius-tubular="0.03"
+            color="#c2a577"
+        ></a-torus>
+
+        <!-- ~ Raked Sand Ring 3 -->
+        <a-torus
+            position="4 0.01 1.8"
+            rotation="90 0 0"
+            radius="1.45"
+            radius-tubular="0.03"
+            color="#c2a577"
+        ></a-torus>
+
+        <!-- ~ Raked Sand Ring 4 (outermost) -->
+        <a-torus
+            position="4 0.01 1.8"
+            rotation="90 0 0"
+            radius="1.75"
+            radius-tubular="0.03"
+            color="#c2a577"
+        ></a-torus>
+
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- ~ Stacked Zen Cairn -> 4 stones on left of the Koi Pond edge and 4 raked lines -->
+        <!-- ~ Stone 1 -> The Bottom Stone -->
+        <a-sphere
+            position="-4 0.22 1.8"
+            radius="0.55"
+            color="#9e9e9e"
+            roughness="0.5"
+            metalness="0.05"
+            scale="1.2 0.55 1.0"
+        ></a-sphere>
+
+        <!-- ~ Stone 2 -->
+        <a-sphere
+            position="-4 0.6 1.8"
+            radius="0.5"
+            color="#a8a8a8"
+            roughness="0.45"
+            metalness="0.05"
+            scale="1.1 0.5 0.95"
+        ></a-sphere>
+
+        <!-- ~ Stone 3 -->
+        <a-sphere
+            position="-4 0.93 1.8"
+            radius="0.4"
+            color="#b5b5b5"
+            roughness="0.4"
+            metalness="0.05"
+            scale="1.0 0.45 0.85"
+        ></a-sphere>
+
+        <!-- ~ Stone 4 -> The Top Stone -->
+        <a-sphere
+            position="-4 1.2 1.8"
+            radius="0.3"
+            color="#c2c2c2"
+            roughness="0.35"
+            metalness="0.05"
+            scale="0.85 0.4 0.75"
+        ></a-sphere>
+
+        <!-- ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <!-- ~ Raked Sand Ring 1 (innermost) -->
+        <a-torus
+            position="-4 0.01 1.8"
+            rotation="90 0 0"
+            radius="0.85"
+            radius-tubular="0.03"
+            color="#c2a577"
+        ></a-torus>
+
+        <!-- ~ Raked Sand Ring 2 -->
+        <a-torus
+            position="-4 0.01 1.8"
+            rotation="90 0 0"
+            radius="1.15"
+            radius-tubular="0.03"
+            color="#c2a577"
+        ></a-torus>
+
+        <!-- ~ Raked Sand Ring 3 -->
+        <a-torus
+            position="-4 0.01 1.8"
+            rotation="90 0 0"
+            radius="1.45"
+            radius-tubular="0.03"
+            color="#c2a577"
+        ></a-torus>
+
+        <!-- ~ Raked Sand Ring 4 (outermost) -->
+        <a-torus
+            position="-4 0.01 1.8"
+            rotation="90 0 0"
+            radius="1.75"
+            radius-tubular="0.03"
+            color="#c2a577"
+        ></a-torus>
+
+    </a-scene>
+</body>
+</html>

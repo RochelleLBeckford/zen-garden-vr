@@ -1,0 +1,92 @@
+/* & This will import the desired font for the webpage */
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+
+* {
+    /* ~ This makes the "width" and "height" include padding and border instead of adding them on top */
+    box-sizing: border-box;
+}
+
+/* & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* & This will style the default appearance of the entire webpage */
+body {
+    font-family: 'Poiret One';
+    /* ~ This will remove the default browser spacing */
+    padding: 0;
+    margin: 0;
+}
+
+/* & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* & This will show the Title of The Zen Garden */
+.zen-title {
+    position: fixed;
+    width: 400px;
+    top: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    font-size: 62px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff9eb5;
+    border: 5px solid #ffffff;
+    border-radius: 30px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    z-index: 100;
+    /* ~ This is so clicks can pass through to the scene */
+    pointer-events: none;
+    letter-spacing: 4px;
+    padding: 10px;
+    margin: auto;
+}
+
+/* & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* & This will style the Time of Day Controls */
+.zen-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 100;
+    pointer-events: none;
+}
+
+/* ~ This will style the buttons */
+.zen-controls button {
+    /* ~ The Buttons can receive clicks */
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffd700;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border: 2px solid #ffd700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poiret One';
+    /* ~ Frosted glass effect */
+    backdrop-filter: blur(5px);
+}
+
+/* ~ This will style what happens when you hover over a button
+    ~ The button will lighten to a gold tint, the button will slightly look bigger, and the border and text will look brighter
+*/
+.zen-controls button:hover {
+    background: rgba(255, 215, 0, 0.2);
+    transform: scale(1.05);
+    border-color: #ffaa00;
+    color: #ffaa00;
+}
+
+/* ~ This will style what happens when clicking a button
+    ~ It will slightly shrink to give a pressed feedback
+*/
+.zen-controls button:active {
+    transform: scale(0.95)
+}
