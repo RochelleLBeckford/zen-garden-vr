@@ -1,8 +1,67 @@
+// & This will create a Camera Boundary so that the user will not go past the <a-plane> of the Zen Garden
+// ~ This will keep the user on the sand
+AFRAME.registerComponent('camera-boundary', {
+    // ~ This function runs once when the component is first attached to the <a-camera>
+    init: function () {
+        // ~ This sets the bounds that the user will be prevented from going beyond
+        this.bounds = {
+            xMin: -7.0,
+            xMax: 7.0,
+            zMin: -7.0,
+            zMax: 7.0,
+        };
+    },
+
+    // & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    // & Thus function runs every frame (typically 60 times per second)
+    // ~ This reads the cameras position and make sure it stays in the allowed bounds
+    tick: function () {
+        // ~ This will get the actual 3D position of the camera
+        const pos = this.el.object3D.position;
+        if (!pos) return;
+
+        // ~ This is a flag to know if anything needs to update
+        let changed = false;
+        let newX = pos.x;
+        let newZ = pos.z;
+
+        // ~ This will clamp the X coordinate (left / right) and stay in the bounds
+        if (pos.x < this.bounds.xMin) {
+            newX = this.bounds.xMin;
+            changed = true;
+        } else if (pos.x > this.bounds.xMax) {
+            newX = this.bounds.xMax;
+            changed = true;
+        }
+
+        // ~ This will clamp the Z coordinate (left / right) and stay in the bounds
+        if (pos.z < this.bounds.zMin) {
+            newZ = this.bounds.zMin;
+            changed = true;
+        } else if (pos.z > this.bounds.zMax) {
+            newZ = this.bounds.zMax;
+            changed = true;
+        }
+
+        // ~ This will correct the camera if it tried to move outside the allowed area
+        if (changed) {
+            pos.x = newX;
+            pos.z = newZ;
+
+            //  ~ This will also update the A-Frame 'position' attribute & keep the Y coordinate unchanged.
+            this.el.setAttribute('position', { x: newX, y: pos.y, z: newZ });
+        }
+    },
+});
+
+// & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // & The Time of Day Controls for The Zen Garden VR
 
 // ~ This will adds two buttons (Sunset and Night) to my Zen Garden
-    //~ When you click Sunset: the sky turns warm orange, the moon hides.
-    //~ When you click Night: the sky turns dark bluish purple, the moon appears, and stars will twinkle.
+//~ When you click Sunset: the sky turns warm orange, the moon hides.
+//~ When you click Night: the sky turns dark bluish purple, the moon appears, and stars will twinkle.
 
 // & This function will setup everything to create these buttons
 function initZenGardenControls() {
