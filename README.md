@@ -108,5 +108,5 @@
 <hr>
 
 - [ ] Link to visit the webpage:
-    <a href="https://rlb-zen-garden-vr.netlify.app" target="_blank">🌸 The Zen Garden VR Project 🌸</a>
+  - [ ] <a href="https://rlb-zen-garden-vr.netlify.app" target="_blank">🌸 The Zen Garden VR Project 🌸</a>
 
