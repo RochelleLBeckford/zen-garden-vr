@@ -70,7 +70,7 @@
 
 <hr>
 
-## <p align="center">✨ HTML Elements (Iverlay)</p>
+## <p align="center">✨ HTML Elements (Overlay)</p>
 -   [ ] `<div class="zen-title">`:
     -   [ ] Fixed-position title bar with "Zen Garden", styled with Poiret One font, pink background, and rounded border.
 -   [ ] `<div class="zen-controls">`:
